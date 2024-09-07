@@ -8,8 +8,8 @@ local_costmap:
 
   static_map: false  
   rolling_window: true
-  width: 6
-  height: 6
+  width: 20
+  height: 20
   resolution: 0.05
   
   plugins:
@@ -19,4 +19,4 @@ local_costmap:
     - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
 
   inference_layer:
-    topic: "/inference_costmap"
+    topic: "/inference_costmap_grid"
