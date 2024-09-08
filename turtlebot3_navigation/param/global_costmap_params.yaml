@@ -2,8 +2,8 @@ global_costmap:
   global_frame: map
   robot_base_frame: base_footprint
 
-  update_frequency: 10.0
-  publish_frequency: 10.0
+  update_frequency: 20.0
+  publish_frequency: 20.0
   transform_tolerance: 0.5
 
   static_map: true
@@ -11,8 +11,4 @@ global_costmap:
   plugins:
     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
     - {name: obstacle_layer,          type: "costmap_2d::ObstacleLayer"}
-    # - {name: inference_layer,         type: "costmap_2d::InferenceLayer"}
     - {name: inflation_layer,         type: "costmap_2d::InflationLayer"}
-
-  # inference_layer:
-  #   topic: "/inference_costmap"
